@@ -27,6 +27,7 @@ class ViewController: UIViewController {
             messageLabel.text = message3
         } else {
             messageLabel.text = message1
+            
      }
     }
     
