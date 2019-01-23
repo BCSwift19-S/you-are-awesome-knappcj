@@ -18,7 +18,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Button(_ sender: UIButton) {
-    messageLabel.text = "You are Awesome!!"
+        let message1 = "You are Awesome!"
+        let message2 = "You are Great!"
+        let message3 = "You are Amazing"
+        if messageLabel.text == message1 {
+            messageLabel.text = message2
+        } else if messageLabel.text == message2 {
+            messageLabel.text = message3
+        } else {
+            messageLabel.text = message1
+     }
     }
     
 }
