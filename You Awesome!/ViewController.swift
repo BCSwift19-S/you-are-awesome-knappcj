@@ -11,25 +11,33 @@ import UIKit
 class ViewController: UIViewController {
   
     @IBOutlet weak var messageLabel: UILabel!
-    
+     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func Button(_ sender: UIButton) {
-        let message1 = "You are Awesome!"
-        let message2 = "You are Great!"
-        let message3 = "You are Amazing"
-        if messageLabel.text == message1 {
-            messageLabel.text = message2
-        } else if messageLabel.text == message2 {
-            messageLabel.text = message3
+        
+        let messages = ["You are Awesome!",
+                        "You are great!",
+                        "You are Fantastic!",
+                        "When the Genius bar needs help, they call you",
+                        "You brighten my day","You are da bomb",
+                        "Hey fabulous","You are tremendous",
+                        "Youve got the design skills of Johnny Ive"]
+        
+        messageLabel.text = messages[index]
+       
+        if index == messages.count - 1 {
+            index = 0
         } else {
-            messageLabel.text = message1
-            
+            index = index + 1
+        }
+        
+        
      }
     }
     
-}
+
 
