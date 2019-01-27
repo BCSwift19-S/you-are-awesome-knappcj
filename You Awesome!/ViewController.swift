@@ -25,15 +25,10 @@ class ViewController: UIViewController {
                         "When the Genius bar needs help, they call you",
                         "You brighten my day","You are da bomb",
                         "Hey fabulous","You are tremendous",
-                        "Youve got the design skills of Johnny Ive"]
+                        "Youve got the design skills of Johnny Ive",
+                        "I can't wait to download you app!"]
         
-        messageLabel.text = messages[index]
-       
-        if index == messages.count - 1 {
-            index = 0
-        } else {
-            index = index + 1
-        }
+        messageLabel.text = messages.randomElement()
         
         
      }
